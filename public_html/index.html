@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bethesda Mod Organiser</title>
+
+	<!-- Viewport Meta-->
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,user-scalable=1,viewport-fit=cover">
+
+	<!-- SEO Meta -->
+	<meta name="description" content="The Bethesda Mod Organiser. No more guessing what mods you had installed. No more memorising which savefile had mods installed.">
+	<meta name="robots" content="INDEX,FOLLOW">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="/assets/styles/css/style.css">
+
+	<!-- Make things look nicer for IE Mobile -->
+	<!--[if IEMobile]><meta http-equiv="cleartype" content="on"><![endif]-->
+</head>
+
+
+<body itemscope itemtype="https://schema.org/WebPage">
+
+	<header itemscope itemtype="https://schema.org/WPHeader" class="header">
+		<div class="container container-center">
+			<ul class="nav-main" data-switcher>
+				<li><a href="#main-search" class="active">Mod Search</a></li>
+				<li><a href="#main-mymods">My Mods</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container container-center">
+			<div id="main-content">
+
+				<div id="main-search" class="main-tab">
+					<div class="container container-center flex flex-center">
+						<form id="mod-search" class="form">
+							<input id="searchText" type="text" name="searchText" placeholder="Search Mods">
+
+							<!-- <label for="selectPlatform">Platform:</label> -->
+							<select id="selectPlatform" name="selectPlatform">
+								<option value="XB1">Xbox One</option>
+								<option value="PS4">Playstation 4</option>
+								<option value="WINDOWS">PC</option>
+							</select>
+
+							<!-- <label for="selectGame">Game:</label> -->
+							<select id="selectGame" name="selectGame">
+								<option value="fallout4">Fallout 4</option>
+								<option value="skyrim">Skyrim</option>
+							</select>
+
+							<button type="submit" class="btn">Search</button>
+						</form>
+					</div>
+
+					<div>
+						<div class="page-title" style="display:none">
+							<span class="search-results">x</span> result(s) for "<span class="search-term"></span>"
+						</div>
+
+						<table class="table-results">
+							<thead>
+								<tr>
+									<th>&nbsp;</th>
+									<th>&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="page-title">Search for Mods</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+				<div id="main-mymods" class="main-tab">
+					<div class="container container-center flex flex-center">
+						<form id="addtoprofile" class="form">
+							<select>
+								<option></option>
+							</select>
+							<button type="submit" class="btn">Save</button>
+							<a href="#" class="btn removeprofile">Delete</a>
+							<a href="#" class="btn addprofile">+</a>
+						</form>
+					</div>
+
+					<div class="container container-center flex flex-center">
+						<form id="form-addprofile" style="display:none">
+							<input type="text">
+							<button class="btn" type="submit" data-addprofile>Add New Profile</button>
+						</form>
+					</div>
+
+					<form id="mod-fiter">
+						<div id="filterPlatform" class="mod-filter">
+							<label><input type="radio" name="filterPlatform" value="" checked> <span>All</span></label>
+							<label><input type="radio" name="filterPlatform" value="XB1"> <span>Xbox</span></label>
+							<label><input type="radio" name="filterPlatform" value="PS4"> <span>Playstation</span></label>
+							<label><input type="radio" name="filterPlatform" value="WINDOWS"> <span>PC</span></label>
+						</div>
+
+						<div id="filterGame" class="mod-filter">
+							<label><input type="radio" name="filterGame" value="" checked> <span>All</span></label>
+							<label><input type="radio" name="filterGame" value="FALLOUT4"> <span>Fallout 4</span></label>
+							<label><input type="radio" name="filterGame" value="SKYRIM"> <span>Skyrim</span></label>
+						</div>
+
+					</form>
+
+					<h3 class="page-title">Mod List</h3>
+					<div id="main-mymods-list" class="modlist"></div>
+				</div>
+
+
+			</div>
+		</div>
+	</main>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/assets/scripts/libs/localforage.js"></script>
+	<script src="/assets/scripts/modscript.js"></script>
+
+</body>
+
+</html>
