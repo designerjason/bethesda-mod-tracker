@@ -6,20 +6,20 @@ Bethesda was awesome in enabling mods for console users. Unfortunately, there's 
 
 This app was intended as a partial solution. Whilst the process is still somewhat manual, it's more of a quick reference and I can now just search then download on the console. When I'm happy with my console list of mods, I just create a profile for it. I imagine once I have a good list of go-to mods, the search feature will be used less..
 
-##mod search
+## mod search
 
 This feature basically pulls data from the bethesda database of mods. You need to know the mod exists first. Note: there's a **hard limit of 50 search results**. I don't want to upset the guys over at Bethesda, so choose your search terms wisely. If you're just browsing for mods you should probably use the official site at https://bethesda.net/en/mods.
 
-##my mods
+## my mods
 
 Compile as many mod profiles as you want, each with it's own list. Refer back to it when you want to use a specific mod list.
 When you create a mod profile, or add mods to a profile - toggle it by ticking it's checkbox - **you'll need to save it**. The page will list **all** mods you have selected by default, irrespective of platform or game. I figured this could be a better approach, say if you have multiple platforms with the same mod or want an overview of **all** your armor mods.
 
-##to do
+## to do
 
 This is still a rough and ready work in progress, and relies on the bethesda api. Any changes there will most certainly affect whether it continues to work going forwards.
 
-##what's next?
+## what's next?
 
 I'd like to add new features as they come, and anyone with some dev experience is welcome to fork this, send feedback, log bugs & get involved etc.
 
