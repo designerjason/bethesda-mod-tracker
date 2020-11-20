@@ -119,8 +119,7 @@ class ModOrganiser {
             console.log('callback success');
         },
 	    	complete: (result)=> {
-
-          if(result.responseJSON) {
+          if(result.responseJSON && result.responseJSON.length) {
             $('.table-results tbody').empty();
             $('.search-meta').show();
             $('.search-results').text(result.responseJSON.length);
@@ -160,6 +159,13 @@ class ModOrganiser {
                 console.log('modsearch error: '+err);
               });
             });
+          } else {
+            $('.table-results tbody').empty();
+            $('.table-results tbody').append(`
+              <tr>
+                <td>No results found, please try again...</td>
+              </tr>`
+            );
           }
 	    	}
 			});
