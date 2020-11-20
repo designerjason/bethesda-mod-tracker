@@ -1,5 +1,7 @@
 # bethesda-mod-organiser
 
+https://designerjason.github.io/bethesda-mod-organiser/public_html/
+
 As a console user, I created this app to keep track of my list(s) of mods. Because I'm not happy with just the one list that the console gives you. Some days I might like to roleplay a synth in Fallout, and use a bunch of synth mods. Another, I might want to focus on managing settlements.
 
 Bethesda was awesome in enabling mods for console users. Unfortunately, there's no system in place to organise my mods into lists, or different 'profiles'. Added to the fact that consoles have a maximum total download cap, I found myself spending far too long trying to rebuild my changed modlist, whenever I wanted to alter my play style. The mod website at bethesda doesn't handle too great, and the in-game UI is somewhat lacking. And when you're trying to search on console for that one esp file with the name ertefsxa.esp, because your save file told you so, it became **such a chore**.
