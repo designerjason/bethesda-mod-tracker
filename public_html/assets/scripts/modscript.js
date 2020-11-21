@@ -4,8 +4,6 @@ class ModOrganiser {
 
   constructor(debugMode) {
     this.debugMode = true;
-    //this.modSearchUrl = 'https://devlicious.link/modorganiser/moddata.php';
-    this.modSearchUrl = 'http://modorganiser.local/moddata.php';
     this.modInfoUrl = 'https://bethesda.net/en/mods';
   }
 

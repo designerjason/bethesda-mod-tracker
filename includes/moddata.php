@@ -14,7 +14,7 @@
     $game = isset( $_GET['selectGame'] )? $selectGame : '';
     $platform = isset( $_GET['selectPlatform'] )? $selectPlatform : '';
     $text = isset( $_GET['searchText'] )? $searchText : '';
-    $filterURL = 'https://api.bethesda.net/mods/ugc-workshop/list/?number_results=' . $number_results . '&amp;product=' . $game . '&amp;platform='. $platform . '&amp;text='. $text;
+    $filterURL = 'https://api.bethesda.net/mods/ugc-workshop/list/?number_results=' . $number_results . '&amp;product=' . $game . '&amp;platform='. $platform . '&amp;text='. $text.'&amp;sort=popular&amp;order=desc';
 
     getJson($filterURL);
 
