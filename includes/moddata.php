@@ -4,7 +4,7 @@
     $number_results = isset( $_GET['number_results'] )? $_GET['number_results'] : '';
     $selectGame = filter_input(INPUT_GET,'selectGame', FILTER_SANITIZE_STRING);
     $selectPlatform = filter_input(INPUT_GET,'selectPlatform', FILTER_SANITIZE_STRING);
-    $searchText = $_GET['searchText'];
+    $searchText = htmlspecialchars($_GET['searchText']);
 
     // let's not go crazy now, we don't want a bum smacking...
     if($number_results_fixed) {
