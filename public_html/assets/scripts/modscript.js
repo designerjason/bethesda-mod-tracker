@@ -4,7 +4,8 @@ class ModOrganiser {
 
   constructor(debugMode) {
     this.debugMode = true;
-    this.modSearchUrl = 'https://devlicious.link/modorganiser/moddata.php';
+    //this.modSearchUrl = 'https://devlicious.link/modorganiser/moddata.php';
+    this.modSearchUrl = 'http://modorganiser.local/moddata.php';
     this.modInfoUrl = 'https://bethesda.net/en/mods';
   }
 
@@ -91,7 +92,7 @@ class ModOrganiser {
  					//number_results: 50,
     			selectPlatform: platformVal,
     			selectGame: gameVal,
-					searchText: searchTxt
+					searchText: encodeURI(searchTxt)
   			},
     		type: "GET",
 
