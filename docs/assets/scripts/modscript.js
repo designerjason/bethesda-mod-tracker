@@ -1,10 +1,12 @@
+const modInfoUrl = 'https://bethesda.net/en/mods';
+const searchUrl = 'https://devlicious.link/modorganiser/moddata.php';
+
 'use strict';
 
 class ModOrganiser {
 
   constructor(debugMode) {
     this.debugMode = true;
-    this.modInfoUrl = 'https://bethesda.net/en/mods';
   }
 
 	Init()
@@ -82,7 +84,7 @@ class ModOrganiser {
 
 			$.ajax({
     		async: false,
-    		url: 'https://devlicious.link/modorganiser/moddata.php',
+    		url: searchUrl,
     		dataType: "jsonp",
         jsonp: false,
         jsonpCallback: "modData",
@@ -149,7 +151,7 @@ class ModOrganiser {
                 $('.table-results tbody').append(`
                   <tr>
                     <td><img src="${val.thm}" width="50" height="50" alt=""></td>
-                    <td><a href="${this.modInfoUrl}/${val['product'].toLowerCase()}/mod-detail/${val.id}" target="_blank">${val.name}</a> <small class="f-text-small">(${val.filesize})</small></td>
+                    <td><a href="${modInfoUrl}/${val.product.toLowerCase()}/mod-detail/${val.id}" target="_blank">${val.name}</a> <small class="f-text-small">(${val.filesize})</small></td>
                     <td>${addModBtn}</td>
                   </tr>`
                 );
@@ -185,7 +187,7 @@ class ModOrganiser {
 			$('#main-mymods-list').append(`
 				<div class="mod-item ${jsonData.product} ${jsonData.platform}">
         <input type="checkbox" class="mod-toggle" data-product="${jsonData.product}" data-platform="${jsonData.platform}" data-id="${jsonData.id}">
-          <a href="${this.modInfoUrl}/${jsonData['product'].toLowerCase()}/mod-detail/${jsonData.id}" target="_blank">${jsonData.name}</a> <small class="f-text-small">(${jsonData.filesize})</small><button class="btn btn-delete" data-removemod data-id="${jsonData.id}">x</button>
+          <a href="${modInfoUrl}/${jsonData.product.toLowerCase()}/mod-detail/${jsonData.id}" target="_blank">${jsonData.name}</a> <small class="f-text-small">(${jsonData.filesize})</small><button class="btn btn-delete" data-removemod data-id="${jsonData.id}">x</button>
         </div>`
 			);
 
