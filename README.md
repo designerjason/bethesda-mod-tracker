@@ -1,6 +1,6 @@
 # bethesda-mod-organiser
 
-https://designerjason.github.io/bethesda-mod-organiser/index.html
+https://designerjason.github.io/bethesda-mod-tracker/index.html
 
 As a console user, I created this app to keep track of my list(s) of mods. Because I'm not happy with just the one list that the console gives you. Some days I might like to roleplay a synth in Fallout, and use a bunch of synth mods. Another, I might want to focus on managing settlements.
 
