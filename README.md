@@ -1,4 +1,4 @@
-# bethesda-mod-organiser
+# bethesda-mod-tracker
 
 https://designerjason.github.io/bethesda-mod-tracker/index.html
 
