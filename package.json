@@ -1,0 +1,47 @@
+{
+  "name": "modtracker",
+  "version": "1.0.0",
+  "description": "",
+  "watch": {
+    "build:html": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html"
+    },
+    "build:js": {
+      "patterns": [
+        "src/assets/scripts"
+      ],
+      "extensions": "js"
+    },
+    "build:css": {
+      "patterns": [
+        "src/assets/styles/scss"
+      ],
+      "extensions": "scss"
+    }
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "build:css": "sass src/assets/styles/scss/style.scss docs/assets/css/style.css --load-path=node_modules --style=compressed --embed-sources",
+    "build:js": "webpack-cli --config ./webpack.config.js",
+    "build:html": "copy \"src\\index.html\" \"docs\"",
+    "server": "node ./node_modules/http-server/bin/http-server ./docs -o /index.html out",
+    "//": "npm run dev: run this for development work, will run a server, watch for file changes and compile where necessary",
+    "dev": "concurrently \"npm:server\" \"npm:watch*\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "http-server": "^14.1.0",
+    "jquery": "^3.6.0",
+    "localforage": "^1.10.0",
+    "npm-watch": "^0.11.0",
+    "sass": "^1.49.9",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
