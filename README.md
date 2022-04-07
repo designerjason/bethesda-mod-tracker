@@ -27,9 +27,8 @@ I'd like to add new features as they come, and anyone with some dev experience i
 
 * Add up filesizes on a mod profile, to show you how much potential space you're going to use up on your console.
 * Ability to re-order mods in a profile, to match a specific load order
-* Front End needs quite a tidy up, implement task runners for sass etc
+* Front End needs quite a tidy up, stylewise
 * Add icons to make mods instantly recognisable as platform/product specific e.g fallout4, xbox
-* Probably tweak some of the styling a bit
 * Might add mod thumbnails to the mod list page, for easier instant recognition
 * Add a toggle to show only active mods in a profile
 * *kinda* works on mobile - though a bit untidy in places. Would be nice to make it use service workers and behave more like an app
